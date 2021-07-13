@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, button, input {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --top-height: 130px;
+    --profile-size: 104px;
+}
+html, body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-cyan);
+    background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    background-repeat: no-repeat, no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+strong {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+}
+span {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+}
+.card-container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0px 6px 25px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+}
+.card-container .card-top {
+    width: 100%;
+    height: var(--top-height);
+    background-image: url('images/bg-pattern-card.svg');
+}
+.card-container .mid-card {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.card-container .mid-card .profile {
+    width: var(--profile-size);
+    height: var(--profile-size);
+    border-radius: 50%;
+    border: 4px solid #fff;
+    position: absolute;
+    top: calc(var(--top-height) - var(--profile-size) / 2);
+}
+.card-container .mid-card .profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.card-container .mid-card .profile-name {
+    margin: 30px 0 5px;
+}
+.card-container .mid-card #age {
+    font-size: 18px;
+    margin-left: 6px;
+}
+.card-container .bottom {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid var(--dark-gray);
+}
+.card-container .bottom div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-container .bottom span {
+    margin-top: 6px;
+}
+.attribution {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--desaturated-blue);
+}
+.attribution a {
+    color: #fff;
+    background: darkcyan;
+    text-decoration: none;
+    border: 3px solid #0000;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: 5s ease;
+}
+.attribution a:hover {
+    background-color:darkblue;
+    opacity: 8;
+}
